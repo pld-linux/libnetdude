@@ -5,8 +5,9 @@
  INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/plugins
-+pkgdir		     = $(pkglibdir)/$(version_major).$(version_minor)/plugins
- pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/plugins/
++pkgdir		     = $(pkglibdir)/plugins
+-pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/plugins/
++pkgincludedir        = $(includedir)/libnetdude/plugins/
  
  pkg_LTLIBRARIES	     = libnd_cksumfix.la
 --- libnetdude-0.11/plugins/BPF-Filter/Makefile.am~	2009-09-15 11:21:16.000000000 +0200
@@ -16,9 +17,10 @@
  INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/plugins
-+pkgdir		     = $(pkglibdir)/$(version_major).$(version_minor)/plugins
- pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/plugins/
- 
++pkgdir		     = $(pkglibdir)/plugins
+-pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/plugins/
++pkgincludedir        = $(includedir)/libnetdude/plugins/
+
  pkg_LTLIBRARIES	     = libnd_bpf.la
 --- libnetdude-0.11/protocols/tcp/Makefile.am~	2009-09-15 11:21:16.000000000 +0200
 +++ libnetdude-0.11/protocols/tcp/Makefile.am	2009-09-15 11:24:12.000000000 +0200
@@ -27,8 +29,9 @@
  INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major).$(version_minor)/protocols
- pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/tcp
++pkgdir		     = $(pkglibdir)/protocols
+-pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/tcp
++pkgincludedir        = $(includedir)/libnetdude/protocols/tcp
  
  pkg_LTLIBRARIES	     = libnd_tcp.la 
 --- libnetdude-0.11/protocols/linux-sll/Makefile.am~	2009-09-15 11:21:16.000000000 +0200
@@ -38,8 +41,9 @@
  INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major).$(version_minor)/protocols
- pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/sll
++pkgdir		     = $(pkglibdir)/protocols
+-pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/sll
++pkgincludedir        = $(includedir)/libnetdude/protocols/sll
  
  pkg_LTLIBRARIES	     = libnd_sll.la 
 --- libnetdude-0.11/protocols/fddi/Makefile.am~	2009-09-15 11:21:16.000000000 +0200
@@ -49,8 +53,9 @@
  INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major).$(version_minor)/protocols
- pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/fddi
++pkgdir		     = $(pkglibdir)/protocols
+-pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/fddi
++pkgincludedir        = $(includedir)/libnetdude/protocols/fddi
  
  pkg_LTLIBRARIES	     = libnd_fddi.la 
 --- libnetdude-0.11/protocols/ip/Makefile.am~	2009-09-15 11:21:16.000000000 +0200
@@ -60,8 +65,9 @@
  INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major).$(version_minor)/protocols
- pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/ip
++pkgdir		     = $(pkglibdir)/protocols
+-pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/ip
++pkgincludedir        = $(includedir)/libnetdude/protocols/ip
  
  pkg_LTLIBRARIES	     = libnd_ip.la 
 --- libnetdude-0.11/protocols/vlan/Makefile.am~	2009-09-15 11:21:16.000000000 +0200
@@ -71,8 +77,9 @@
  INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major).$(version_minor)/protocols
- pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/vlan
++pkgdir		     = $(pkglibdir)/protocols
+-pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/vlan
++pkgincludedir        = $(includedir)/libnetdude/protocols/vlan
  
  pkg_LTLIBRARIES	     = libnd_vlan.la 
 --- libnetdude-0.11/protocols/icmp/Makefile.am~	2009-09-15 11:21:16.000000000 +0200
@@ -82,8 +89,9 @@
  INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major).$(version_minor)/protocols
- pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/icmp
++pkgdir		     = $(pkglibdir)/protocols
+-pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/icmp
++pkgincludedir        = $(includedir)/libnetdude/protocols/icmp
  
  pkg_LTLIBRARIES	     = libnd_icmp.la 
 --- libnetdude-0.11/protocols/ether/Makefile.am~	2009-09-15 11:21:16.000000000 +0200
@@ -93,7 +101,7 @@
  INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major).$(version_minor)/protocols
++pkgdir		     = $(pkglibdir)/protocols
  
  pkg_LTLIBRARIES	     = libnd_ethernet.la 
  
@@ -104,7 +112,7 @@
  INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major).$(version_minor)/protocols
++pkgdir		     = $(pkglibdir)/protocols
  
  pkg_LTLIBRARIES	     = libnd_802_11.la 
  
@@ -115,8 +123,9 @@
  INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major).$(version_minor)/protocols
- pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/arp
++pkgdir		     = $(pkglibdir)/protocols
+-pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/arp
++pkgincludedir        = $(includedir)/libnetdude/protocols/arp
  
  pkg_LTLIBRARIES	     = libnd_arp.la 
 --- libnetdude-0.11/protocols/snap/Makefile.am~	2009-09-15 11:21:16.000000000 +0200
@@ -126,8 +135,9 @@
  INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major).$(version_minor)/protocols
- pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/snap
++pkgdir		     = $(pkglibdir)/protocols
+-pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/snap
++pkgincludedir        = $(includedir)/libnetdude/protocols/snap
  
  pkg_LTLIBRARIES	     = libnd_snap.la 
 --- libnetdude-0.11/protocols/udp/Makefile.am~	2009-09-15 11:21:16.000000000 +0200
@@ -137,10 +147,22 @@
  INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
  
 -pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
-+pkgdir		     = $(pkglibdir)/$(version_major).$(version_minor)/protocols
- pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/udp
++pkgdir		     = $(pkglibdir)/protocols
+-pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/udp
++pkgincludedir        = $(includedir)/libnetdude/protocols/udp
  
  pkg_LTLIBRARIES	     = libnd_udp.la 
+--- libnetdude-0.11/src/Makefile.am~    2009-09-15 15:40:04.000000000 +0200
++++ libnetdude-0.11/src/Makefile.am     2009-09-15 15:43:57.000000000 +0200
+@@ -4,7 +4,7 @@
+
+ lib_LTLIBRARIES = libnetdude.la
+
+-pkgincludedir = $(includedir)/libnetdude/$(version_major).$(version_minor)
++pkgincludedir = $(includedir)/libnetdude
+
+ pkginclude_HEADERS = \
+        libnd.h \
 --- libnetdude-0.11/configure.in~	2009-09-15 11:21:16.000000000 +0200
 +++ libnetdude-0.11/configure.in	2009-09-15 11:33:18.000000000 +0200
 @@ -88,14 +88,14 @@
@@ -162,3 +184,33 @@
  fi
  PACKAGE_DATA_DIR=`eval eval eval eval "echo $PACKAGE_DATA_DIR"`
  AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${PACKAGE_DATA_DIR}", [The data dir of the package])
+--- libnetdude-0.11/tools/lndtool.c.in~	2008-08-29 15:50:57.000000000 +0200
++++ libnetdude-0.11/tools/lndtool.c.in	2009-09-15 16:17:24.000000000 +0200
+@@ -158,7 +158,7 @@
+ 
+ 	  if (strcmp("@PACKAGE_INCLUDE_DIR@", "/usr/include"))
+ 	    includes = "-I@PACKAGE_INCLUDE_DIR@ ";
+-	  printf("%s-I@prefix@/include/libnetdude/@version_major@.@version_minor@ @glib_cflags@ @pcapnav_cflags@\n",
++	  printf("%s-I@prefix@/include/libnetdude @glib_cflags@ @pcapnav_cflags@\n",
+ 		 includes);
+ 	}
+       else if (! strcmp(argv[i], "--libs"))
+@@ -167,15 +167,15 @@
+ 	}
+       else if (! strcmp(argv[i], "--include-dir"))
+ 	{
+-	  printf("@prefix@/include/libnetdude/@version_major@.@version_minor@\n");
++	  printf("@prefix@/include/libnetdude\n");
+ 	}
+       else if (! strcmp(argv[i], "--plugin-dir"))
+ 	{
+-	  printf("@PACKAGE_DATA_DIR@/@version_major@.@version_minor@/plugins\n");
++	  printf("@PACKAGE_DATA_DIR@/plugins\n");
+ 	}
+       else if (! strcmp(argv[i], "--proto-dir"))
+ 	{
+-	  printf("@PACKAGE_DATA_DIR@/@version_major@.@version_minor@/protocols\n");
++	  printf("@PACKAGE_DATA_DIR@/protocols\n");
+ 	}
+       else if (! strcmp(argv[i], "--plugins") ||
+ 	       ! strcmp(argv[i], "-p"))
