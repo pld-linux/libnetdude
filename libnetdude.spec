@@ -1,6 +1,9 @@
 #
 # TODO: pl desc
 #
+# Conditional build
+%bcond_without	static_libs	# don't build static library
+#
 Summary:	Packet manipulation backend of the Netdude trace file editing framework
 #Summary(p7l.UTF-8):
 Name:		libnetdude
@@ -73,7 +76,8 @@ Statyczna biblioteka libnetdude.
 %{__autoconf}
 %{__autoheader}
 %{__automake}
-%configure
+%configure \
+	%{!?with_static_libs:--disable-static}
 %{__make}
 
 %install
@@ -107,7 +111,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/%{name}/*/libnd*.la
 %{_includedir}/%{name}
 
+%if %{with static_libs}
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libnetdude.a
 %{_libdir}/%{name}/*/libnd*.a
+%endif
