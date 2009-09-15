@@ -7,7 +7,7 @@ Summary:	Packet manipulation backend of the Netdude trace file editing framework
 #Summary(p7l.UTF-8):
 Name:		libnetdude
 Version:	0.11
-Release:	1
+Release:	0.1
 License:	Distributable
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/netdude/libnetdude/%{version}/%{name}-%{version}.tar.gz
