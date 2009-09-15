@@ -1,13 +1,11 @@
 #
-# TODO:
-#	- pl
-#	- remove version from paths
+# TODO: pl desc
 #
 Summary:	Packet manipulation backend of the Netdude trace file editing framework
 #Summary(p7l.UTF-8):
 Name:		libnetdude
 Version:	0.11
-Release:	0.1
+Release:	1
 License:	Distributable
 Group:		Libraries
 Source0:	http://dl.sourceforge.net/netdude/libnetdude/%{version}/%{name}-%{version}.tar.gz
@@ -101,13 +99,15 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %{_libdir}/libnetdude.so
 %{_libdir}/libnetdude.la
-%dir %{_libdir}/%{name}/%{version}/plugins
-%dir %{_libdir}/%{name}/%{version}/protocols
-%{_libdir}/%{name}/*/*/libnd*.la
-%attr(755,root,root) %{_libdir}/%{name}/*/*/libnd*.so
+%dir %{_libdir}/%{name}/plugins
+%attr(755,root,root) %{_libdir}/%{name}/plugins/libnd_*.so
+%dir %{_libdir}/%{name}/protocols
+%attr(755,root,root) %{_libdir}/%{name}/protocols/libnd_*.so
+%dir %{_libdir}/%{name}
+%{_libdir}/%{name}/*/libnd*.la
 %{_includedir}/%{name}
 
 %files static
 %defattr(644,root,root,755)
 %{_libdir}/libnetdude.a
-%{_libdir}/%{name}/*/*/libnd*.a
+%{_libdir}/%{name}/*/libnd*.a
