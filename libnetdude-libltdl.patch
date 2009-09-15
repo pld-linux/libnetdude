@@ -1,0 +1,202 @@
+--- libnetdude-0.11/Makefile.am~	2008-08-28 15:28:12.000000000 +0200
++++ libnetdude-0.11/Makefile.am	2009-09-15 10:29:04.000000000 +0200
+@@ -1,6 +1,6 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+-SUBDIRS = libltdl src tools protocols plugins test docs
++SUBDIRS = src tools protocols plugins test docs
+ 
+ MAINTAINERCLEANFILES = Makefile.in aclocal.m4 config.guess \
+                        config.h.in config.sub configure install-sh \
+--- libnetdude-0.11/configure.in~	2008-08-28 16:19:19.000000000 +0200
++++ libnetdude-0.11/configure.in	2009-09-15 10:37:07.000000000 +0200
+@@ -19,7 +19,6 @@
+ AC_PROG_MAKE_SET
+ 
+ AC_LIBLTDL_CONVENIENCE
+-AC_CONFIG_SUBDIRS(libltdl)
+ 
+ AC_LIBTOOL_DLOPEN
+ AM_PROG_LIBTOOL
+--- libnetdude-0.11/plugins/ChecksumFix/Makefile.am~	2005-03-18 18:07:28.000000000 +0100
++++ libnetdude-0.11/plugins/ChecksumFix/Makefile.am	2009-09-15 10:41:38.000000000 +0200
+@@ -7,7 +7,7 @@
+ 
+ LIBS                 =
+ LDFLAGS		     = -L$(top_srcdir)/src
+-INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_srcdir)/src -W -Wall
++INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/plugins
+ pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/plugins/
+--- libnetdude-0.11/plugins/BPF-Filter/Makefile.am~	2005-03-18 18:07:28.000000000 +0100
++++ libnetdude-0.11/plugins/BPF-Filter/Makefile.am	2009-09-15 10:45:04.000000000 +0200
+@@ -7,7 +7,7 @@
+ 
+ LIBS                 =
+ LDFLAGS		     = -L$(top_srcdir)/src
+-INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_srcdir)/src -W -Wall
++INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/plugins
+ pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/plugins/
+--- libnetdude-0.11/protocols/tcp/Makefile.am~	2005-03-18 18:07:30.000000000 +0100
++++ libnetdude-0.11/protocols/tcp/Makefile.am	2009-09-15 10:45:39.000000000 +0200
+@@ -3,7 +3,7 @@
+ # A list of all the files in the current directory which can be regenerated
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+-INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_srcdir)/src -W -Wall
++INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
+ pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/tcp
+--- libnetdude-0.11/protocols/linux-sll/Makefile.am~	2005-03-18 18:07:30.000000000 +0100
++++ libnetdude-0.11/protocols/linux-sll/Makefile.am	2009-09-15 10:46:20.000000000 +0200
+@@ -3,7 +3,7 @@
+ # A list of all the files in the current directory which can be regenerated
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+-INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_srcdir)/src -W -Wall
++INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
+ pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/sll
+--- libnetdude-0.11/protocols/fddi/Makefile.am~	2005-03-18 18:07:28.000000000 +0100
++++ libnetdude-0.11/protocols/fddi/Makefile.am	2009-09-15 10:46:47.000000000 +0200
+@@ -3,7 +3,7 @@
+ # A list of all the files in the current directory which can be regenerated
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+-INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_srcdir)/src -W -Wall
++INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
+ pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/fddi
+--- libnetdude-0.11/protocols/ip/Makefile.am~	2005-03-18 18:07:29.000000000 +0100
++++ libnetdude-0.11/protocols/ip/Makefile.am	2009-09-15 10:47:19.000000000 +0200
+@@ -3,7 +3,7 @@
+ # A list of all the files in the current directory which can be regenerated
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+-INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_srcdir)/src -W -Wall
++INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
+ pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/ip
+--- libnetdude-0.11/protocols/vlan/Makefile.am~	2007-11-13 19:58:38.000000000 +0100
++++ libnetdude-0.11/protocols/vlan/Makefile.am	2009-09-15 10:47:55.000000000 +0200
+@@ -3,7 +3,7 @@
+ # A list of all the files in the current directory which can be regenerated
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+-INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_srcdir)/src -W -Wall
++INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
+ pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/vlan
+--- libnetdude-0.11/protocols/icmp/Makefile.am~	2005-03-18 18:07:29.000000000 +0100
++++ libnetdude-0.11/protocols/icmp/Makefile.am	2009-09-15 10:48:26.000000000 +0200
+@@ -3,7 +3,7 @@
+ # A list of all the files in the current directory which can be regenerated
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+-INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_srcdir)/src -W -Wall
++INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
+ pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/icmp
+--- libnetdude-0.11/protocols/ether/Makefile.am~	2005-03-18 18:07:28.000000000 +0100
++++ libnetdude-0.11/protocols/ether/Makefile.am	2009-09-15 10:49:04.000000000 +0200
+@@ -3,7 +3,7 @@
+ # A list of all the files in the current directory which can be regenerated
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+-INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_srcdir)/src -W -Wall
++INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
+ 
+--- libnetdude-0.11/protocols/802.11/Makefile.am~	2005-03-18 18:07:28.000000000 +0100
++++ libnetdude-0.11/protocols/802.11/Makefile.am	2009-09-15 10:49:36.000000000 +0200
+@@ -3,7 +3,7 @@
+ # A list of all the files in the current directory which can be regenerated
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+-INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_srcdir)/src -W -Wall
++INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
+ 
+--- libnetdude-0.11/protocols/arp/Makefile.am~	2005-03-18 18:07:28.000000000 +0100
++++ libnetdude-0.11/protocols/arp/Makefile.am	2009-09-15 10:50:09.000000000 +0200
+@@ -3,7 +3,7 @@
+ # A list of all the files in the current directory which can be regenerated
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+-INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_srcdir)/src -W -Wall
++INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
+ pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/arp
+--- libnetdude-0.11/protocols/snap/Makefile.am~	2005-03-18 18:07:30.000000000 +0100
++++ libnetdude-0.11/protocols/snap/Makefile.am	2009-09-15 10:50:40.000000000 +0200
+@@ -3,7 +3,7 @@
+ # A list of all the files in the current directory which can be regenerated
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+-INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_srcdir)/src -W -Wall
++INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
+ pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/snap
+--- libnetdude-0.11/protocols/udp/Makefile.am~	2005-03-18 18:07:30.000000000 +0100
++++ libnetdude-0.11/protocols/udp/Makefile.am	2009-09-15 10:51:15.000000000 +0200
+@@ -3,7 +3,7 @@
+ # A list of all the files in the current directory which can be regenerated
+ MAINTAINERCLEANFILES = Makefile.in
+ 
+-INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/libltdl -I$(top_srcdir)/src -W -Wall
++INCLUDES	     = @glib_cflags@ @pcapnav_cflags@ -I$(top_srcdir) -I$(top_srcdir)/src -W -Wall
+ 
+ pkgdir		     = $(pkgdatadir)/$(version_major).$(version_minor)/protocols
+ pkgincludedir        = $(includedir)/libnetdude/$(version_major).$(version_minor)/protocols/udp
+--- libnetdude-0.11/src/Makefile.am~	2006-05-03 20:55:58.000000000 +0200
++++ libnetdude-0.11/src/Makefile.am	2009-09-15 10:52:39.000000000 +0200
+@@ -1,6 +1,6 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+-INCLUDES = -I$(top_srcdir) -I$(top_srcdir)/libltdl @glib_cflags@ @pcapnav_cflags@ -W -Wall ## -DMEMDEBUG
++INCLUDES = -I$(top_srcdir) @glib_cflags@ @pcapnav_cflags@ -W -Wall ## -DMEMDEBUG
+ 
+ lib_LTLIBRARIES = libnetdude.la
+ 
+@@ -69,5 +69,5 @@
+ 	libnd_trace.c libnd_trace.h \
+ 	libnd_timestamp.h
+ 
+-libnetdude_la_LIBADD = $(top_builddir)/libltdl/libltdlc.la @glib_libs@ @pcapnav_libs@
++libnetdude_la_LIBADD = -lltdl @glib_libs@ @pcapnav_libs@
+ 
+--- libnetdude-0.11/src/libnd_protocol_plugin.c~	2008-08-29 15:52:29.000000000 +0200
++++ libnetdude-0.11/src/libnd_protocol_plugin.c	2009-09-15 11:02:42.000000000 +0200
+@@ -188,7 +188,7 @@
+ proto_plugin_hook_up(LND_ProtoPlugin *plugin)
+ {
+   LND_Protocol *proto;
+-  lt_ptr_t     sym;
++  lt_ptr     sym;
+ 
+   if ((sym = lt_dlsym(plugin->lt, "name")) != NULL)
+     plugin->name = sym;
+--- libnetdude-0.11/src/libnd_plugin.c~	2008-08-29 15:52:29.000000000 +0200
++++ libnetdude-0.11/src/libnd_plugin.c	2009-09-15 11:03:04.000000000 +0200
+@@ -177,7 +177,7 @@
+ static gboolean
+ plugin_hook_up(LND_Plugin *plugin)
+ {
+-  lt_ptr_t     sym;
++  lt_ptr     sym;
+ 
+   if ((sym = lt_dlsym(plugin->lt, "name")) != NULL)
+     plugin->name = sym;
