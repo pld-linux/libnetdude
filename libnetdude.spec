@@ -19,10 +19,13 @@ Patch2:		%{name}-paths.patch
 URL:		http://netdude.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
+BuildRequires:	glib-devel
 BuildRequires:	libltdl-devel
+BuildRequires:	libmagic-devel
+BuildRequires:	libpcap-devel
 BuildRequires:	libpcapnav-devel
 BuildRequires:	libtool
-BuildRequires:	tcpdump
+BuildRequires:	zlib-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -77,6 +80,7 @@ Statyczna biblioteka libnetdude.
 %{__autoheader}
 %{__automake}
 %configure \
+	--with-tcpdump=/usr/sbin/tcpdump \
 	%{!?with_static_libs:--disable-static}
 %{__make}
 
