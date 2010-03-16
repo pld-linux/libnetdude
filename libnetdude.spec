@@ -7,15 +7,14 @@
 Summary:	Packet manipulation backend of the Netdude trace file editing framework
 #Summary(p7l.UTF-8):
 Name:		libnetdude
-Version:	0.11
+Version:	0.12
 Release:	1
 License:	Distributable
 Group:		Libraries
-Source0:	http://dl.sourceforge.net/netdude/libnetdude/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	8859cdc23d56e1a8f392a8c365079f83
+Source0:	http://downloads.sourceforge.net/netdude/libnetdude/%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	de5ebc5bcf2d93627c0e9648d48b8c9d
 Patch0:		%{name}-libltdl.patch
-Patch1:		%{name}-duplicate_files.patch
-Patch2:		%{name}-paths.patch
+Patch1:		%{name}-paths.patch
 URL:		http://netdude.sourceforge.net/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -71,7 +70,6 @@ Statyczna biblioteka libnetdude.
 %setup -q
 %patch0 -p1
 %patch1 -p1
-%patch2 -p1
 
 %build
 %{__libtoolize}
