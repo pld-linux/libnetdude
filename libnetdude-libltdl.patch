@@ -8,16 +8,6 @@
  
  MAINTAINERCLEANFILES = Makefile.in aclocal.m4 config.guess \
                         config.h.in config.sub configure install-sh \
---- libnetdude-0.11/configure.in~	2008-08-28 16:19:19.000000000 +0200
-+++ libnetdude-0.11/configure.in	2009-09-15 10:37:07.000000000 +0200
-@@ -19,7 +19,6 @@
- AC_PROG_MAKE_SET
- 
- AC_LIBLTDL_CONVENIENCE
--AC_CONFIG_SUBDIRS(libltdl)
- 
- AC_LIBTOOL_DLOPEN
- AM_PROG_LIBTOOL
 --- libnetdude-0.11/plugins/ChecksumFix/Makefile.am~	2005-03-18 18:07:28.000000000 +0100
 +++ libnetdude-0.11/plugins/ChecksumFix/Makefile.am	2009-09-15 10:41:38.000000000 +0200
 @@ -7,7 +7,7 @@
@@ -178,25 +168,24 @@
 -libnetdude_la_LIBADD = $(top_builddir)/libltdl/libltdlc.la @glib_libs@ @pcapnav_libs@
 +libnetdude_la_LIBADD = -lltdl @glib_libs@ @pcapnav_libs@
  
---- libnetdude-0.11/src/libnd_protocol_plugin.c~	2008-08-29 15:52:29.000000000 +0200
-+++ libnetdude-0.11/src/libnd_protocol_plugin.c	2009-09-15 11:02:42.000000000 +0200
-@@ -188,7 +188,7 @@
- proto_plugin_hook_up(LND_ProtoPlugin *plugin)
- {
-   LND_Protocol *proto;
--  lt_ptr_t     sym;
-+  lt_ptr     sym;
+--- libnetdude-0.12/configure.in~	2010-03-16 05:46:05.000000000 +0100
++++ libnetdude-0.12/configure.in	2010-03-16 13:54:14.234706157 +0100
+@@ -8,7 +8,6 @@
  
-   if ((sym = lt_dlsym(plugin->lt, "name")) != NULL)
-     plugin->name = sym;
---- libnetdude-0.11/src/libnd_plugin.c~	2008-08-29 15:52:29.000000000 +0200
-+++ libnetdude-0.11/src/libnd_plugin.c	2009-09-15 11:03:04.000000000 +0200
-@@ -177,7 +177,7 @@
- static gboolean
- plugin_hook_up(LND_Plugin *plugin)
- {
--  lt_ptr_t     sym;
-+  lt_ptr     sym;
+ AC_DEFINE_UNQUOTED(VERSION_MAJOR, "${version_major}", [Major package version])
+ AC_DEFINE_UNQUOTED(VERSION_MINOR, "${version_minor}", [Minor package version])
+-AC_CONFIG_AUX_DIR([libltdl/config])
+ AM_INIT_AUTOMAKE
+ AM_CONFIG_HEADER([config.h])
  
-   if ((sym = lt_dlsym(plugin->lt, "name")) != NULL)
-     plugin->name = sym;
+@@ -19,10 +18,8 @@
+ AC_PROG_CC
+ AC_PROG_MAKE_SET
+ 
+-LT_CONFIG_LTDL_DIR([libltdl])
+ LT_INIT([dlopen])
+ LTDL_INIT
+-AC_CONFIG_MACRO_DIR([libltdl/m4])
+ 
+ #AC_LIBLTDL_CONVENIENCE
+ #AC_CONFIG_SUBDIRS(libltdl)

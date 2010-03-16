@@ -163,27 +163,6 @@
 
  pkginclude_HEADERS = \
         libnd.h \
---- libnetdude-0.11/configure.in~	2009-09-15 11:21:16.000000000 +0200
-+++ libnetdude-0.11/configure.in	2009-09-15 11:33:18.000000000 +0200
-@@ -88,14 +88,14 @@
- dnl ##################################################
- dnl # Set PACKAGE_DATA_DIR in config.h.
- dnl ##################################################
--if test "x${datadir}" = 'x${prefix}/share'; then
-+if test "x${libdir}" = 'x${prefix}/lib'; then
-   if test "x${prefix}" = "xNONE"; then
--    PACKAGE_DATA_DIR="${ac_default_prefix}/share/${PACKAGE}"
-+    PACKAGE_DATA_DIR="${ac_default_prefix}/lib/${PACKAGE}"
-   else
--    PACKAGE_DATA_DIR="${prefix}/share/${PACKAGE}"
-+    PACKAGE_DATA_DIR="${prefix}/lib/${PACKAGE}"
-   fi
- else
--  PACKAGE_DATA_DIR="${datadir}/${PACKAGE}"
-+  PACKAGE_DATA_DIR="${libdir}/${PACKAGE}"
- fi
- PACKAGE_DATA_DIR=`eval eval eval eval "echo $PACKAGE_DATA_DIR"`
- AC_DEFINE_UNQUOTED(PACKAGE_DATA_DIR, "${PACKAGE_DATA_DIR}", [The data dir of the package])
 --- libnetdude-0.11/tools/lndtool.c.in~	2008-08-29 15:50:57.000000000 +0200
 +++ libnetdude-0.11/tools/lndtool.c.in	2009-09-15 16:17:24.000000000 +0200
 @@ -158,7 +158,7 @@
